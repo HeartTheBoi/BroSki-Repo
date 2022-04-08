@@ -1527,7 +1527,7 @@ Witch:Button("Mass Pain(V)",function()
 	})
 
 end)
-Misc:Button("Inf Stamina(Also Works With Witch and Wolf)",function()
+Misc:Button("Inf Stamina(Also Works With Witch and wolf)",function()
 	local Player = game.Players.LocalPlayer
 	local Character = Player.Character
 
@@ -1540,42 +1540,34 @@ Misc:Button("Inf Stamina(Also Works With Witch and Wolf)",function()
 	end
 end)
 Misc:Button("Wolf Bite(U)",function()
-local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Humanoid = Character.Humanoid
-	local UserInputService = game:GetService("UserInputService")
-	local mouse = Player:GetMouse()
-	--local Debounce = true
-	local Key = 'U'
-	local db = true
+    local UserInputService = game:GetService("UserInputService")
+    local keybind = Enum.KeyCode.U
+    local function iskeybinddown()
+        return UserInputService:IsKeyDown(keybind)
+    end
+    local function Input(input, gameProcessedEvent)
+        local localplr = game.Players.LocalPlayer
+        local mouse = localplr:GetMouse()
+        if iskeybinddown() then
+            if mouse.Target and mouse.Target.Parent then
+                plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+                if plr ~= nil then
+                    local user = game.Players[plr.Name].Character
+			local args = {
+			    [1] = "Bite",
+			    [2] = {
+				[2] = user,
+				[1] = false
+			    }
+			}
 
-	UserInputService.InputBegan:Connect(function(input, IsTyping)
-		if IsTyping then return end
-		if input.KeyCode == Enum.KeyCode[Key] then
-			local A_1 = "Bite"
-			local A_2 = 
-				{
-					[1] = false, 
-					[2] = mouse.Target.Parent
-				}
-			local Event = game:GetService("ReplicatedStorage").Events.Werewolf
-			Event:FireServer(A_1, A_2)
-
-			UserInputService.InputBegan:Connect(function(input, IsTyping)
-				if IsTyping then return end
-				if input.KeyCode == Enum.KeyCode[Key] then
-					local A_1 = "Bite"
-					local A_2 = 
-						{
-							[1] = false, 
-							[2] = mouse.Target.Parent.Parent
-						}
-					local Event = game:GetService("ReplicatedStorage").Events.Werewolf
-					Event:FireServer(A_1, A_2)
-				end
-			end)
-		end
-	end)
+			game:GetService("ReplicatedStorage").Events.Werewolf:FireServer(unpack(args))
+                    print(plr.Name)
+                end
+            end
+        end
+    end
+    UserInputService.InputBegan:Connect(Input)
 end)
 Misc:Button("Remove Wolf-Ven",function()
 	local Player = game.Players.LocalPlayer
