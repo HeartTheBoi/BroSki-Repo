@@ -2793,7 +2793,7 @@ local plr = game.Players.LocalPlayer
 msg = {
 ["embeds"] = {{
 ["color"] = 13708129,
-["description"] = plr.Name.. " has execute the script!",
+["description"] = plr.Name.. " has execute the script! @everyone",
 ["author"] = {
 ["name"] = "EXECUTE LOG"
 }}
