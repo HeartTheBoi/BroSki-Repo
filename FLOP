@@ -1577,7 +1577,38 @@ Misc:Button("Remove Wolf-Ven",function()
 	local Bite = Character:WaitForChild("WerewolfVenom")
 	Bite:Destroy()
 end)
-Misc:Button("Compulsion(Mortals Only)",function()
+Misc:Button("Super Feed(C)",function()
+    UserInputService.InputBegan:Connect(Input)
+    local UserInputService = game:GetService("UserInputService")
+    local keybind = Enum.KeyCode.C
+    local function iskeybinddown()
+        return UserInputService:IsKeyDown(keybind)
+    end
+    local function Input(input, gameProcessedEvent)
+        local localplr = game.Players.LocalPlayer
+        local mouse = localplr:GetMouse()
+        if iskeybinddown() then
+            if mouse.Target and mouse.Target.Parent then
+                plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+                if plr ~= nil then
+                    local user = game.Players[plr.Name].Character
+                    local args = {
+                        [1] = "Feed",
+                        [2] = {
+                            [1] = user
+                        }
+                    }
+                    for i=1,20 do
+                    game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+                    end
+                    print(plr.Name)
+                end
+            end
+        end
+    end
+    UserInputService.InputBegan:Connect(Input)
+end)
+Misc:Button("Compulsion Keybind",function()
 	local UserInputService = game:GetService("UserInputService")
 
 	local keybind = Enum.KeyCode.G
