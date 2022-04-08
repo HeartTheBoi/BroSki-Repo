@@ -1577,6 +1577,35 @@ Misc:Button("Remove Wolf-Ven",function()
 	local Bite = Character:WaitForChild("WerewolfVenom")
 	Bite:Destroy()
 end)
+Misc:Button("Heal(E)",function()
+    local UserInputService = game:GetService("UserInputService")
+    local keybind = Enum.KeyCode.E
+    local function iskeybinddown()
+        return UserInputService:IsKeyDown(keybind)
+    end
+    local function Input(input, gameProcessedEvent)
+        local localplr = game.Players.LocalPlayer
+        local mouse = localplr:GetMouse()
+        if iskeybinddown() then
+            if mouse.Target and mouse.Target.Parent then
+                plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+                if plr ~= nil then
+                    local user = game:GetService("Players")[plr.Name]Character
+                    local args = {
+                        [1] = "Heal",
+                        [2] = {
+                            [1] = user
+                        }
+                    }
+
+                    game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+                    print(plr.Name)
+                end
+            end
+        end
+    end
+    UserInputService.InputBegan:Connect(Input)
+end)
 Misc:Button("Super Feed(C)",function()
     UserInputService.InputBegan:Connect(Input)
     local UserInputService = game:GetService("UserInputService")
