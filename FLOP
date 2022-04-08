@@ -1598,9 +1598,7 @@ Misc:Button("Super Feed(C)",function()
                             [1] = user
                         }
                     }
-                    for i=1,20 do
                     game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
-                    end
                     print(plr.Name)
                 end
             end
