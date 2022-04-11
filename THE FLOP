@@ -1,12 +1,3 @@
-if game.PlaceId == 4754736350 then
-    local Rep = game:GetService("ReplicatedStorage")
-    local Ban = Rep.Events.Ban
-    local BanClient = Rep.Events.BanClient
-    local ModBan = Rep.Events.ModBan
-    ModBan:Destroy()
-    BanClient:Destroy()
-    Ban:Destroy()
-end
 local key = "Your"
 local okey = "Mum"
 local ScreenGui = Instance.new("ScreenGui")
