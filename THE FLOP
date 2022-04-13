@@ -82,25 +82,27 @@ Enter.MouseButton1Down:connect(function()
         KEY.Text = "Password Correct!"
         Loginframe.Visible = false
         if game.PlaceId == 4754736350 then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPIEST%20FLOP"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPIEST%20FLOP"))()
         elseif game.PlaceId == 6984676411 then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/Supernat"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/Supernat"))()
         elseif game.PlaceId == 5194554335 then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
         elseif game.PlaceId == 7191149331 then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
         elseif game.PlaceId == 527730528 then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/luke1593247/Scripts/5e8ddfb69f798d1abbb6de004a5f813f2b1bb3f5/MagicTraining"))()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MagicTraining"))()
-            loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/luke1593247/Scripts/5e8ddfb69f798d1abbb6de004a5f813f2b1bb3f5/MagicTraining"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MagicTraining"))()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
         elseif game.PlaceId == 2768379856 then
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/Viserromero/Antex/master/SCP3008'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Viserromero/Antex/master/SCP3008'))()
         elseif game.PlaceId == 8708975067 then
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/e'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/e'))()
         elseif game.PlaceId == 7646796713 then
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/UAUP'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/UAUP'))()
         elseif game.PlaceId == 537413528 then
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/babft'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/babft'))()
+	elseif game.PlaceId == 9020538053 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BoiDiandre/TheLua/main/FLPPEDINBE"))()
         end
     elseif KEY.Text == okey then
         KEY.Text = "Checking."
