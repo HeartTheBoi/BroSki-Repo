@@ -1,6 +1,6 @@
 local key = "Your"
 local okey = "Mum"
-local ScreenGui = Instance.new("ScreenGui")
+local LOGIN = Instance.new("ScreenGui")
 local Loginframe = Instance.new("Frame")
 local INNERFRAME = Instance.new("Frame")
 local TITLE = Instance.new("TextLabel")
@@ -12,8 +12,8 @@ local UICorner_4 = Instance.new("UICorner")
 local Enter = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LOGIN.Parent = game.CoreGui
+LOGIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Loginframe.Name = "Loginframe"
 Loginframe.Parent = ScreenGui
