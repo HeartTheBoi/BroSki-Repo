@@ -1,4 +1,4 @@
-local key = "Your"
+local key = "try me whore."
 local okey = "Mum"
 local LOGIN = Instance.new("ScreenGui")
 local Loginframe = Instance.new("Frame")
