@@ -1,4 +1,5 @@
 if game.PlaceId == 4754736350 then
+	wait(10)
     local Rep = game:GetService("ReplicatedStorage")
     local Ban = Rep.Events.Ban
     local BanClient = Rep.Events.BanClient
