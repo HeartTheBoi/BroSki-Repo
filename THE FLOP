@@ -106,16 +106,6 @@ Enter.TextSize = 14.000
 Enter.TextWrapped = true
 Enter.MouseButton1Down:connect(function()
 	local DISCORD = DISCORD.Text
-	local response = syn.request(
-		{
-			Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
-			Method = 'POST',
-			Headers = {
-				['Content-Type'] = 'application/json'
-			},
-			Body = game:GetService('HttpService'):JSONEncode({content = '**EXPLOITER DISCORD =** '..DISCORD})
-		}
-	);
 	if KEY.Text == key then
 		KEY.Text = "Checking."
 		wait(0.5)
@@ -165,6 +155,16 @@ Enter.MouseButton1Down:connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
 			end)            
 		end
+			local response = syn.request(
+		{
+			Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
+			Method = 'POST',
+			Headers = {
+				['Content-Type'] = 'application/json'
+			},
+			Body = game:GetService('HttpService'):JSONEncode({content = '**EXPLOITER DISCORD =** '..DISCORD})
+		}
+	);
 	elseif KEY.Text == okey then
 		KEY.Text = "Checking."
 		wait(0.5)
