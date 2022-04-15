@@ -12,7 +12,7 @@ if game.PlaceId == 4754736350 then
 	})
 end
 wait(1)
-local key = "i fucked your mom"
+local key = "Choke"
 local okey = "TRY HARD"
 local LOGIN = Instance.new("ScreenGui")
 local Loginframe = Instance.new("Frame")
