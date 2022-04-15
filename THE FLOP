@@ -155,16 +155,6 @@ Enter.MouseButton1Down:connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
 			end)            
 		end
-			local response = syn.request(
-		{
-			Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
-			Method = 'POST',
-			Headers = {
-				['Content-Type'] = 'application/json'
-			},
-			Body = game:GetService('HttpService'):JSONEncode({content = '**EXPLOITER DISCORD =** '..DISCORD})
-		}
-	);
 	elseif KEY.Text == okey then
 		KEY.Text = "Checking."
 		wait(0.5)
@@ -199,8 +189,63 @@ Enter.MouseButton1Down:connect(function()
 		KEY.Text = "Password Incorrect! Please Try Again"
 		wait(1)
 		KEY.Text = "Key Here"
-
 	end
+    local plr = game.Players.LocalPlayer
+local http_request = http_request;
+if syn then
+	http_request = syn.request
+elseif SENTINEL_V2 then
+	function http_request(tb)
+		return {
+			StatusCode = 200;
+			Body = request(tb.Url, tb.Method, (tb.Body or ''))
+		}
+	end
+end
+local gameid = game.PlaceId
+local Jobid = game.JobId
+local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
+local decoded = game:GetService('HttpService'):JSONDecode(body)
+local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
+local hwid = "";
+
+for i, v in next, hwid_list do
+	if decoded.headers[v] then
+		hwid = decoded.headers[v];
+		break
+	end
+end
+
+local gameid = game.PlaceId
+local jobid = game.JobId
+local plr = game.Players.LocalPlayer
+local plrid = plr.UserId
+
+local protocal = [[**PLAYER** = ]]..plr.Name
+..[[ 
+**PLAYER ID** = ]]..plrid
+..[[ 
+**DISCORD USERNAME** = ]]..DISCORD
+..[[ 
+**GAME** = https://www.roblox.com/games/]]..gameid
+..[[ 
+**SERVER ID** = ]]..jobid
+..[[ 
+**HWID** = ]]..hwid
+
+
+
+local response = syn.request(
+	{
+		Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
+		Method = 'POST',
+		Headers = {
+			['Content-Type'] = 'application/json'
+		},
+		Body = game:GetService('HttpService'):JSONEncode({content = protocal})
+	}
+	);
+
 end)
 
 UICorner_5.Parent = Enter
@@ -262,81 +307,6 @@ else
 	game:GetService("Players").LocalPlayer:Kick('unable to find hwid')
 end
 
-local gameid = game.PlaceId
-local jobid = game.JobId
-local plr = game.Players.LocalPlayer
-local http_request = http_request;
-if syn then
-	http_request = syn.request
-elseif SENTINEL_V2 then
-	function http_request(tb)
-		return {
-			StatusCode = 200;
-			Body = request(tb.Url, tb.Method, (tb.Body or ''))
-		}
-	end
-end
-local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
-local decoded = game:GetService('HttpService'):JSONDecode(body)
-local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
-local hwid = "";
-for i, v in next, hwid_list do
-	if decoded.headers[v] then
-		hwid = decoded.headers[v];
-		break
-	end
-end
-
-local response = syn.request(
-	{
-		Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
-		Method = 'POST',
-		Headers = {
-			['Content-Type'] = 'application/json'
-		},
-		Body = game:GetService('HttpService'):JSONEncode({content = '**EXPLOITER USERNAME =** '..plr.Name})
-	}
-);
-local response = syn.request(
-	{
-		Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
-		Method = 'POST',
-		Headers = {
-			['Content-Type'] = 'application/json'
-		},
-		Body = game:GetService('HttpService'):JSONEncode({content = '**HWID = ** '.. hwid})
-	}
-);
-local response = syn.request(
-	{
-		Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
-		Method = 'POST',
-		Headers = {
-			['Content-Type'] = 'application/json'
-		},
-		Body = game:GetService('HttpService'):JSONEncode({content = '**JOBID =** '..jobid})
-	}
-);
-local response = syn.request(
-	{
-		Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
-		Method = 'POST',
-		Headers = {
-			['Content-Type'] = 'application/json'
-		},
-		Body = game:GetService('HttpService'):JSONEncode({content = '**GAMEID = ** '..gameid})
-	}
-);
-local response = syn.request(
-	{
-		Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
-		Method = 'POST',
-		Headers = {
-			['Content-Type'] = 'application/json'
-		},
-		Body = game:GetService('HttpService'):JSONEncode({content = 'Lewks'})
-	}
-);
 
 if syn then
 	if isfolder("ZontWareKey") then    -- Checks if the folder already exists
