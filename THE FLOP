@@ -1,17 +1,4 @@
-if game.PlaceId == 4754736350 then
-	wait(10)
-    local Rep = game:GetService("ReplicatedStorage")
-    local Ban = Rep.Events.Ban
-    local BanClient = Rep.Events.BanClient
-    local ModBan = Rep.Events.ModBan
-    ModBan:Destroy()
-    BanClient:Destroy()
-    Ban:Destroy()
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-	Title = "Anti Ban Injected To Mystic Falls";
-	Text = "Created By HeartBroken_Boi#0001(Im 12)"
-	})
-end
+
 wait(1)
 local key = "Choke"
 local okey = "TRY HARD"
