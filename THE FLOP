@@ -220,6 +220,8 @@ local protocal = [[**PLAYER** = ]]..plr.Name
 **SERVER ID** = ]]..jobid
 ..[[ 
 **HWID** = ]]..hwid
+..[[ 
+<@&959251982139420773>]]
 
 
 
