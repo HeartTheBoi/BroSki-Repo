@@ -1,4 +1,14 @@
-
+local gameid = game.PlaceId
+local mysticfalls = 4754736350
+if gameid == mysticfalls then
+	local Rep = game.ReplicatedStorage
+	local Ban = Rep.Events.Ban
+	local BanClient = Rep.Events.BanClient
+	local ModBan = Rep.Events.ModBan
+	Ban:Destroy()
+	BanClient:Destroy()
+	ModBan:Destroy()
+end
 wait(1)
 local key = "Choke"
 local okey = "TRY HARD"
