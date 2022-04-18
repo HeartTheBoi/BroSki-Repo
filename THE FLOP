@@ -2,9 +2,10 @@ local gameid = game.PlaceId
 local mysticfalls = 4754736350
 if gameid == mysticfalls then
 	local Rep = game.ReplicatedStorage
-	local Ban = Rep.Events.Ban
-	local BanClient = Rep.Events.BanClient
-	local ModBan = Rep.Events.ModBan
+	local Events = Rep.Events or Rep:WaitForChild("Events")
+	local Ban = Events:WaitForChild("Ban")
+	local BanClient = Events:WaitForChild("BanClient")
+	local ModBan = Events:WaitForChild("ModBan")
 	Ban:Destroy()
 	BanClient:Destroy()
 	ModBan:Destroy()
