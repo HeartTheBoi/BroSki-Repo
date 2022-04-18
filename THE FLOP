@@ -130,16 +130,19 @@ Enter.MouseButton1Down:connect(function()
 		elseif game.PlaceId == 537413528 then
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/babft'))()
 		elseif game.PlaceId == 9020538053 then
-			local plr = game.Players.LocalPlayer
-			local descendant = game.workspace.Players[plr.Name]
-			game.workspace.DescendantAdded:Connect(function(descendant)
-				wait(5)
-				_G.ANTI = false
-				_G.REGEN = false
-				_G.LOOP = false
-				_G.DeleteChannel = false
-				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
-			end)       
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
+			game:GetService('Players').PlayerAdded:Connect(function(player)
+				player.CharacterAdded:Connect(function(character)
+					character:WaitForChild("Humanoid").Died:Connect(function()
+							wait(15)
+							_G.ANTI = false
+							_G.REGEN = false
+							_G.LOOP = false
+							_G.DeleteChannel = false
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
+					end)
+				end)
+			end)     
 		end
 	elseif KEY.Text == okey then
 		KEY.Text = "Checking."
