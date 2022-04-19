@@ -218,9 +218,13 @@ for i, v in next, hwid_list do
 	end
 end
 if hwid then
-	print("a")
+	rconsoleprint("@@GREEN@@")
+	rconsoleprint("           <----------------->          \n")
+	rconsoleprint("              HWID WHITELIST            \n")
+	rconsoleprint("           <----------------->          \n\n")
+	rconsoleprint("YOUR HWID = "..hwid)
 else
-	print("no hwid")
+	game:GetService("Players").LocalPlayer:Kick('unable to find hwid')
 end
 
 local gameid = game.PlaceId
@@ -280,43 +284,6 @@ UIS.InputBegan:Connect(function(Key)
 		game:GetService("CoreGui").ScreenGui.main.Visible = true
 	end
 end)
-local plr = game.Players.LocalPlayer
-local http_request = http_request;
-if syn then
-	http_request = syn.request
-elseif SENTINEL_V2 then
-	function http_request(tb)
-		return {
-			StatusCode = 200;
-			Body = request(tb.Url, tb.Method, (tb.Body or ''))
-		}
-	end
-end
-local gameid = game.PlaceId
-local Jobid = game.JobId
-local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
-local decoded = game:GetService('HttpService'):JSONDecode(body)
-local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
-local hwid = "";
-
-for i, v in next, hwid_list do
-	if decoded.headers[v] then
-		hwid = decoded.headers[v];
-		break
-	end
-end
-
-if hwid then
-	rconsoleprint("@@GREEN@@")
-	rconsoleprint("           <----------------->          \n")
-	rconsoleprint("              HWID WHITELIST            \n")
-	rconsoleprint("           <----------------->          \n\n")
-	rconsoleprint("YOUR HWID = "..hwid)
-else
-	game:GetService("Players").LocalPlayer:Kick('unable to find hwid')
-end
-
-
 if syn then
 	if isfolder("ZontWareKey") then    -- Checks if the folder already exists
 		print("The folder, MyFolder is already created on the User's PC therefore we wont make another one.") 
