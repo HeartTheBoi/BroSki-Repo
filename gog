@@ -13,6 +13,7 @@ local Enter = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 
 LOGIN.Parent = game.CoreGui
+LOGIN.Name = "LOGINGUI"
 LOGIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Loginframe.Name = "Loginframe"
