@@ -201,6 +201,8 @@ elseif SENTINEL_V2 then
 			Body = request(tb.Url, tb.Method, (tb.Body or ''))
 		}
 	end
+else
+	local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
 end
 local gameid = game.PlaceId
 local Jobid = game.JobId
@@ -214,6 +216,11 @@ for i, v in next, hwid_list do
 		hwid = decoded.headers[v];
 		break
 	end
+end
+if hwid then
+	print("a")
+else
+	print("no hwid")
 end
 
 local gameid = game.PlaceId
