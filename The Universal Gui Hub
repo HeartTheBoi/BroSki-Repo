@@ -150,6 +150,8 @@ Enter.MouseButton1Down:connect(function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/UAUP'))()
 		elseif game.PlaceId == 537413528 then
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/babft'))()
+		elseif game.PlaceId == 5679403447 then
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPY%20TM'),true))()
 		elseif game.PlaceId == 9020538053 then
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
 			game:GetService('Players').PlayerAdded:Connect(function(player)
