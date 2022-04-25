@@ -156,7 +156,9 @@ Enter.MouseButton1Down:connect(function()
 							loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
 					end)
 				end)
-			end)     
+			end)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 		end
 	elseif KEY.Text == okey then
 		KEY.Text = "Checking."
