@@ -193,6 +193,14 @@ Enter.MouseButton1Down:connect(function()
 		wait(1)
 		KEY.Text = "Key Here"
 	end
+	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
+Notification:Notify(
+   {Title = "ZontWare Notification", Description = "Password correct! you may now have access to the script, enjoy!"},
+   {OutlineColor = Color3.fromRGB(249, 233, 153),Time = 5, Type = "image"},
+   {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+)
+
     local plr = game.Players.LocalPlayer
 local http_request = http_request;
 if syn then
