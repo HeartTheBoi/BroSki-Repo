@@ -1,0 +1,17 @@
+_G.SPAM = true
+while _G.SPAM == true do
+  for i= 1,200000000 do
+      for i= 1,200000000 do
+          for i= 1,200000000 do
+              local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
+              local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
+              Notification:Notify(
+                 {Title = "ZontWare Notification", Description = "This Gui Hub Was Made By zont#0001"},
+                 {OutlineColor = Color3.fromRGB(249, 233, 153),Time = 5, Type = "image"},
+                 {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+              )
+          end
+      end
+  end
+  wait()
+ end
