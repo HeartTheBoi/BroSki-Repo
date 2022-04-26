@@ -155,6 +155,8 @@ Enter.MouseButton1Down:connect(function()
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPY%20TM'),true))()
 		elseif game.PlaceId == 6184602709 then
    			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/Moon%20Go%20Br'),true))()	
+		elseif game.PlaceId == 6084825835 then
+    			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/SALEM'),true))()
 		elseif game.PlaceId == 9020538053 then
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
 			game:GetService('Players').PlayerAdded:Connect(function(player)
