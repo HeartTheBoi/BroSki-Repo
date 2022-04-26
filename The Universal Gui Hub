@@ -23,6 +23,7 @@ end
 wait(1)
 local key = "Choke"
 local okey = "TRY HARD"
+local Exit = "Exit"
 local LOGIN = Instance.new("ScreenGui")
 local Loginframe = Instance.new("Frame")
 local INNERFRAME = Instance.new("Frame")
@@ -171,6 +172,8 @@ Enter.MouseButton1Down:connect(function()
 		else
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 		end
+	elseif KEY.Text == Exit then 
+		game.CoreGui.ScreenGui:Destroy()
 	elseif KEY.Text == okey then
 		KEY.Text = "Checking."
 		wait(0.5)
