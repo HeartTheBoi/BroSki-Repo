@@ -161,6 +161,14 @@ Enter.MouseButton1Down:connect(function()
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
 		else
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+			if game.CreatorType == Enum.CreatorType.User then
+				game:GetService("Players").LocalPlayer.UserId = OwnerID
+			    game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+			elseif game.CreatorType == Enum.CreatorType.Group then
+				local OwnerID = game:GetService('GroupService'):GetGroupInfoAsync(game.CreatorId).Owner.Id
+				game:GetService("Players").LocalPlayer.UserId = OwnerID
+			    game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+			end
 		end
 	elseif KEY.Text == Exit then 
 		game.CoreGui.ScreenGui:Destroy()
