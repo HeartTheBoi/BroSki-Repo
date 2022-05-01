@@ -1,3 +1,27 @@
+local gameid = game.PlaceId
+local mysticfalls = 4754736350
+if gameid == mysticfalls then
+	local Ban1 = game:GetService("ReplicatedStorage").Events:FindFirstChild("ModBan")
+	local Ban2 = game:GetService("ReplicatedStorage").Events:FindFirstChild("BanClient")
+	local Ban3 = game:GetService("ReplicatedStorage").Events:FindFirstChild("Ban")
+	local Ban4 = game:GetService("ReplicatedStorage").Events:FindFirstChild("idontexploit")
+	local Ban5 = game:GetService("ReplicatedStorage").Events:FindFirstChild("logAction")
+	    if Ban1 then
+		Ban1:Destroy()
+	    end
+	    if Ban2 then
+		Ban2:Destroy()
+	    end
+	    if Ban3 then
+		Ban3:Destroy()
+	    end
+	    if Ban4 then
+		Ban4:Destroy()
+	    end
+	    if Ban5 then
+		Ban5:Destroy()
+	    end
+end
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
 Notification:Notify(
@@ -8,18 +32,6 @@ Notification:Notify(
 local plr = game.Players.LocalPlayer
 --plr:Kick("A fucking skid named japani shared it again so now im not putting my script out again.")
 
-local gameid = game.PlaceId
-local mysticfalls = 4754736350
-if gameid == mysticfalls then
-	local Rep = game.ReplicatedStorage
-	local Events = Rep.Events or Rep:WaitForChild("Events")
-	local Ban = Events:WaitForChild("Ban")
-	local BanClient = Events:WaitForChild("BanClient")
-	local ModBan = Events:WaitForChild("ModBan")
-	Ban:Destroy()
-	BanClient:Destroy()
-	ModBan:Destroy()
-end
 wait(1)
 local key = "Choke"
 local okey = "TRY HARD"
