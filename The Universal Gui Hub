@@ -22,6 +22,33 @@ if gameid == mysticfalls then
 	    if Ban5 then
 		Ban5:Destroy()
 	    end
+	local plr = game.Players.LocalPlayer
+	local A = 'superaches'
+	local B = 'rubenhatesyouu'
+	local A = 'jjavvvierr'
+	local A = 'TheDivana'
+	local A = 'uvita_omg'
+	local B = 'rzdolph'
+	local C = 'fx3lip'
+	local D = 'AdoreAdalyn'
+	local E = 'savients'
+	local F = 'kaiyeoa'
+	local G = 'liyannarrr'
+	local H = 'catfvsh'
+	local I = 'xelsurai'
+	local J = 'xxwanjakittyloverxx'
+	local K = 'Vazorie'
+	local L = 'Vazorio'
+	local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..gameid.."/servers/Public?sortOrder=Asc&limit=100"))
+	while true do wait()
+	    if game:GetService("Players"):FindFirstChild(A or B or C or D or E or F or G or H or I or J or K or L) then
+		for i,v in pairs(Servers.data) do
+		    if v.playing ~= v.maxPlayers then
+			game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
+		    end
+		end    
+	    end
+	end
 end
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
