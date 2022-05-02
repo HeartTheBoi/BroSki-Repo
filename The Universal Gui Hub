@@ -25,9 +25,9 @@ if gameid == mysticfalls then
 	local plr = game.Players.LocalPlayer
 	local A = 'superaches'
 	local B = 'rubenhatesyouu'
-	local A = 'jjavvvierr'
-	local A = 'TheDivana'
-	local A = 'uvita_omg'
+	local C = 'jjavvvierr'
+	local M = 'TheDivana'
+	local N = 'uvita_omg'
 	local B = 'rzdolph'
 	local C = 'fx3lip'
 	local D = 'AdoreAdalyn'
@@ -41,7 +41,7 @@ if gameid == mysticfalls then
 	local L = 'Vazorio'
 	local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..gameid.."/servers/Public?sortOrder=Asc&limit=100"))
 	while true do wait()
-	    if game:GetService("Players"):FindFirstChild(A or B or C or D or E or F or G or H or I or J or K or L) then
+	    if game:GetService("Players"):FindFirstChild(A or B or C or D or E or F or G or H or I or J or K or L or M or N) then
 		for i,v in pairs(Servers.data) do
 		    if v.playing ~= v.maxPlayers then
 			game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
