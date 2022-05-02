@@ -221,121 +221,75 @@ Enter.MouseButton1Down:connect(function()
 		KEY.Text = "Key Here"
 	end
 	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
-Notification:Notify(
-   {Title = "ZontWare Notification", Description = "Password correct! you may now have access to the script, enjoy!"},
-   {OutlineColor = Color3.fromRGB(249, 233, 153),Time = 5, Type = "image"},
-   {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
-)
-
-    local plr = game.Players.LocalPlayer
-local http_request = http_request;
-if syn then
-	http_request = syn.request
-elseif SENTINEL_V2 then
-	function http_request(tb)
-		return {
-			StatusCode = 200;
-			Body = request(tb.Url, tb.Method, (tb.Body or ''))
-		}
-	end
-else
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
+	Notification:Notify(
+	{Title = "ZontWare Notification", Description = "Password correct! you may now have access to the script, enjoy!"},
+	{OutlineColor = Color3.fromRGB(249, 233, 153),Time = 5, Type = "image"},
+	{Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+	)
+	
 	local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
-end
-local gameid = game.PlaceId
-local Jobid = game.JobId
-local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
-local decoded = game:GetService('HttpService'):JSONDecode(body)
-local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
-local hwid = "";
+	local webhookcheck =
+	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+	secure_load and "Sentinel" or
+	KRNL_LOADED and "Krnl" or
+	SONA_LOADED and "Sona" or
+	"Kid with shit exploit"
 
-for i, v in next, hwid_list do
-	if decoded.headers[v] then
-		hwid = decoded.headers[v];
-		break
-	end
-end
-if hwid then
-	rconsoleprint("@@GREEN@@")
-	rconsoleprint("           <----------------->          \n")
-	rconsoleprint("              HWID WHITELIST            \n")
-	rconsoleprint("           <----------------->          \n\n")
-	rconsoleprint("YOUR HWID = "..hwid)
-else
-	game:GetService("Players").LocalPlayer:Kick('unable to find hwid')
-end
+	local gameid = game.PlaceId
+	local jobid = game.JobId
+	local plr = game.Players.LocalPlayer
+	local plrid = plr.UserId
 
-local gameid = game.PlaceId
-local jobid = game.JobId
-local plr = game.Players.LocalPlayer
-local plrid = plr.UserId
-
-local protocal = [[**PLAYER** = ]]..plr.Name
-..[[ 
-**PLAYER ID** = ]]..plrid
-..[[ 
-**DISCORD USERNAME** = ]]..DISCORD
-..[[ 
-**GAME** = https://www.roblox.com/games/]]..gameid
-..[[ 
-**SERVER ID** = ]]..jobid
-..[[ 
-**HWID** = ]]..hwid
-..[[ 
-<@938315426297962516>]]
-
-
-
-local response = syn.request(
-	{
-		Url = 'https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV',
-		Method = 'POST',
-		Headers = {
-			['Content-Type'] = 'application/json'
-		},
-		Body = game:GetService('HttpService'):JSONEncode({content = protocal})
+	local protocal = [[**PLAYER** = ]]..plr.Name
+	..[[ 
+	**PLAYER ID** = ]]..plrid
+	..[[ 
+	**DISCORD USERNAME** = ]]..DISCORD
+	..[[ 
+	**GAME** = https://www.roblox.com/games/]]..gameid
+	..[[ 
+	**SERVER ID** = ]]..jobid
+	..[[ 
+	**HWID** = ]]..hwid
+	..[[ 
+	**Their Executed** = ]]..webhookcheck
+	local plr = game.Players.LocalPlayer
+	local DATA = 
+	print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
+	local url =
+	"https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
+	local data = {
+	["content"] = "<@938315426297962516><@818068097260584991>",
+	["embeds"] = {
+		{
+			["title"] = "Script Executed!",
+			["description"] = protocal,
+			["type"] = "rich",
+			["color"] = tonumber(0x7269da),
+			["image"] = {
+				["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+					tostring(game:GetService("Players").LocalPlayer.Name)
+			}
+		}
 	}
-	);
+	}
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+	local headers = {
+	["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
+
+	print("fap")
 
 end)
 
 UICorner_5.Parent = Enter
 
 
-local UserInputService = game:GetService("UserInputService")
-UserInputService.InputBegan:Connect(Input)
-local HotKeys = Enum.KeyCode.KeypadSeven
-local UIS = game:GetService("UserInputService")
-
-UIS.InputBegan:Connect(function(Key)
-	if Key.KeyCode == HotKeys then
-		game:GetService("CoreGui").ScreenGui.main.Visible = false
-	end
-end)
-
-UserInputService.InputBegan:Connect(Input)
-local HotKeys = Enum.KeyCode.KeypadEight
-local UIS = game:GetService("UserInputService")
-
-UIS.InputBegan:Connect(function(Key)
-	if Key.KeyCode == HotKeys then
-		game:GetService("CoreGui").ScreenGui.main.Visible = true
-	end
-end)
-if syn then
-	if isfolder("ZontWareKey") then    -- Checks if the folder already exists
-		print("The folder, MyFolder is already created on the User's PC therefore we wont make another one.") 
-	else
-		makefolder("ZontWareKey")   -- If the folder doesnt exist, make a new one
-	end
-end
-if syn then 
-	if isfile('ZontWareKey/BlurSave.txt') then -- Check if the blur file exists
-		print("File already exists therefore I will not make another one.") 
-	else
-		writefile("ZontWareKey/ZontWareKeySystem.txt", "YOUR KEY IS ".. hwid)  
-	end
-end
 syn.request({
 	Url = "http://127.0.0.1:6463/rpc?v=1",
 	Method = "POST",
