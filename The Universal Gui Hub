@@ -34,7 +34,7 @@ local plr = game.Players.LocalPlayer
 --plr:Kick("A fucking skid named japani shared it again so now im not putting my script out again.")
 
 wait(1)
-local key = "Choke"
+local key = "Wolf"
 local okey = "TRY HARD"
 local Exit = "Exit"
 local LOGIN = Instance.new("ScreenGui")
