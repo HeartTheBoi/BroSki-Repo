@@ -1,3 +1,4 @@
+--FOR THOSE OF YOU WHO SEE MY WEBHOOK DO NOT TOUCH IT. AND DO NOT DARE SEND THIS THING INTO IT "!start" IT TOTALLY WONT HACK YOU AND DO NOT SHARE THE LINK TO THIS REPO THROUGH THE WEBHOOK
 local gameid = game.PlaceId
 local mysticfalls = 4754736350
 if gameid == mysticfalls then
@@ -287,7 +288,7 @@ local protocal = [[**PLAYER** = ]]..plr.Name
 
 local response = syn.request(
 	{
-		Url = 'https://discord.com/api/webhooks/963986799594700892/mvQgoFFfq0dGeb0iByFby8L2OZb2sFwVeQDBQdzmVp_uYVgE2uz45HBPEBb_Mh_U2uGD',
+		Url = 'https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV',
 		Method = 'POST',
 		Headers = {
 			['Content-Type'] = 'application/json'
