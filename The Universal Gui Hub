@@ -337,7 +337,7 @@ syn.request({
 _G.PROTECT = true
 while _G.PROTECT == true do
     for i = 1,20 do
-    rconsoleprint("TRYNA SEE MY SOURCE????")
+    rconsoleprint("")
     end
     wait()
 end
