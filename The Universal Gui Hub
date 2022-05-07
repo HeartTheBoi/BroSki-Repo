@@ -1,4 +1,9 @@
 --FOR THOSE OF YOU WHO SEE MY WEBHOOK DO NOT TOUCH IT. AND DO NOT DARE SEND THIS THING INTO IT "!start" IT TOTALLY WONT HACK YOU AND DO NOT SHARE THE LINK TO THIS REPO THROUGH THE WEBHOOK
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
+local blacklisted = "A21F8594-34DF-413E-88EA-B5C0F6EEEDC3", "29BCEFFD-BE0E-4996-AB66-4F3F93864AAC"
+if hwid == blacklisted then
+    game.Players.LocalPlayer:Kick("blacklisted")
+end
 local gameid = game.PlaceId
 local mysticfalls = 4754736350
 if gameid == mysticfalls then
@@ -34,7 +39,7 @@ local plr = game.Players.LocalPlayer
 --plr:Kick("A fucking skid named japani shared it again so now im not putting my script out again.")
 
 wait(1)
-local key = "Cackles"
+local key = "Chance"
 local okey = "TRY HARD"
 local Exit = "Exit"
 local LOGIN = Instance.new("ScreenGui")
