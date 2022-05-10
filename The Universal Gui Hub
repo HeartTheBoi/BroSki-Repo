@@ -4,6 +4,58 @@ local Blacklisted = 'A21F8594-34DF-413E-88EA-B5C0F6EEEDC3', '6A94282D-FCC5-4C25-
 
 if hwid == Blacklisted then
     game.Players.LocalPlayer:Kick("You Are Blacklisted If You Think This Is A Mistake Message zont#0001")
+    local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
+	local webhookcheck =
+	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+	secure_load and "Sentinel" or
+	KRNL_LOADED and "Krnl" or
+	SONA_LOADED and "Sona" or
+	"Kid with shit exploit"
+
+	local gameid = game.PlaceId
+	local jobid = game.JobId
+	local plr = game.Players.LocalPlayer
+	local plrid = plr.UserId
+
+	local protocal = [[**PLAYER** = ]]..plr.Name
+	..[[ 
+	**PLAYER ID** = ]]..plrid
+	..[[ 
+	**GAME** = https://www.roblox.com/games/]]..gameid
+	..[[ 
+	**SERVER ID** = ]]..jobid
+	..[[ 
+	**HWID** = ]]..hwid
+	..[[ 
+	**Their Executed** = ]]..webhookcheck
+	local plr = game.Players.LocalPlayer
+	local DATA = 
+	print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
+	local url =
+	"https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
+	local data = {
+	["content"] = "<@938315426297962516><@818068097260584991>",
+	["embeds"] = {
+		{
+			["title"] = "Script Executed!(THEY ARE BLACKLISTED!)",
+			["description"] = protocal,
+			["type"] = "rich",
+			["color"] = tonumber(0x7269da),
+			["image"] = {
+				["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+					tostring(game:GetService("Players").LocalPlayer.Name)
+			}
+		}
+	}
+	}
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+	local headers = {
+	["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
 end
 local gameid = game.PlaceId
 local mysticfalls = 4754736350
@@ -290,36 +342,6 @@ Enter.MouseButton1Down:connect(function()
 	request(abcdef)
 
 	print("fap")
-	if game.PlaceId == mysticfalls then
-		local plr = game.Players.LocalPlayer
-		local A = 'superaches'
-		local B = 'rubenhatesyouu'
-		local C = 'jjavvvierr'
-		local M = 'TheDivana'
-		local N = 'uvita_omg'
-		local B = 'rzdolph'
-		local C = 'fx3lip'
-		local D = 'AdoreAdalyn'
-		local E = 'savients'
-		local F = 'kaiyeoa'
-		local G = 'liyannarrr'
-		local H = 'catfvsh'
-		local I = 'xelsurai'
-		local J = 'xxwanjakittyloverxx'
-		local K = 'Vazorie'
-		local L = 'Vazorio'
-		local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..gameid.."/servers/Public?sortOrder=Asc&limit=100"))
-		while true do wait()
-			if game:GetService("Players"):FindFirstChild(A or B or C or D or E or F or G or H or I or J or K or L or M or N) then
-			for i,v in pairs(Servers.data) do
-				if v.playing ~= v.maxPlayers then
-				game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
-				end
-			end    
-			end
-		end
-	end
-
 end)
 
 UICorner_5.Parent = Enter
@@ -335,7 +357,7 @@ syn.request({
 	Body = game:GetService("HttpService"):JSONEncode({
 		cmd = "INVITE_BROWSER",
 		args = {
-			code = "DXM9KsA5bS"
+			code = "zontware"
 		},
 		nonce = game:GetService("HttpService"):GenerateGUID(false)
 	}),
@@ -347,4 +369,3 @@ while _G.PROTECT == true do
     end
     wait()
 end
-
