@@ -1,8 +1,9 @@
 --FOR THOSE OF YOU WHO SEE MY WEBHOOK DO NOT TOUCH IT. AND DO NOT DARE SEND THIS THING INTO IT "!start" IT TOTALLY WONT HACK YOU AND DO NOT SHARE THE LINK TO THIS REPO THROUGH THE WEBHOOK
-local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
-local blacklisted = "A21F8594-34DF-413E-88EA-B5C0F6EEEDC3", "29BCEFFD-BE0E-4996-AB66-4F3F93864AAC"
-if hwid == blacklisted then
-    game.Players.LocalPlayer:Kick("blacklisted")
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+local Blacklisted = 'A21F8594-34DF-413E-88EA-B5C0F6EEEDC3', '6A94282D-FCC5-4C25-B63E-5192E386B482', 'DE53CB41-4A46-4749-8282-B2871082DDA1'
+
+if hwid == Blacklisted then
+    game.Players.LocalPlayer:Kick("You Are Blacklisted If You Think This Is A Mistake Message zont#0001")
 end
 local gameid = game.PlaceId
 local mysticfalls = 4754736350
