@@ -310,7 +310,7 @@ Enter.MouseButton1Down:connect(function()
 	..[[ 
 	**SERVER ID** = ]]..jobid
 	..[[ 
-	**KEY THEY ENTERED** = ]]..okey
+	**KEY ]].DISCORD..[[ HAS ENTERED** = ]]..KEY.Text
 	..[[ 
 	**HWID** = ]]..hwid
 	..[[ 
