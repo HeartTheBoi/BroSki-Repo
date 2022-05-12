@@ -89,12 +89,11 @@ Notification:Notify(
    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
 )
 local plr = game.Players.LocalPlayer
---plr:Kick("A fucking skid named japani shared it again so now im not putting my script out again.")
 
+local key = "Cardi B"
+local okey = "LEWKS!"
+local Exit = "x"
 wait(1)
-local key = "Chance"
-local okey = "TRY HARD"
-local Exit = "Exit"
 local LOGIN = Instance.new("ScreenGui")
 local Loginframe = Instance.new("Frame")
 local INNERFRAME = Instance.new("Frame")
@@ -276,6 +275,8 @@ Enter.MouseButton1Down:connect(function()
 		wait(0.5)
 		KEY.Text = "Password Incorrect! Please Try Again"
 		wait(1)
+		KEY.Text = "BESTIE HOW YOU GET THE KEY WRONG?"
+		wait(1)
 		KEY.Text = "Key Here"
 	end
 	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
@@ -308,6 +309,8 @@ Enter.MouseButton1Down:connect(function()
 	**GAME** = https://www.roblox.com/games/]]..gameid
 	..[[ 
 	**SERVER ID** = ]]..jobid
+	..[[ 
+	**KEY THEY ENTERED** = ]]..okey
 	..[[ 
 	**HWID** = ]]..hwid
 	..[[ 
