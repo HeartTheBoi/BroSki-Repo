@@ -25,7 +25,7 @@ if gameid == mysticfalls then
 	    end
 end
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-local Blacklisted = 'A21F8594-34DF-413E-88EA-B5C0F6EEEDC3', '6A94282D-FCC5-4C25-B63E-5192E386B482', 'DE53CB41-4A46-4749-8282-B2871082DDA1', '15584772-A779-453F-8811-34CAD3C22560'
+local Blacklisted = 'A21F8594-34DF-413E-88EA-B5C0F6EEEDC3', '6A94282D-FCC5-4C25-B63E-5192E386B482', 'DE53CB41-4A46-4749-8282-B2871082DDA1', '15584772-A779-453F-8811-34CAD3C22560', '8D13CB1F-E0BB-4053-8FFB-2AA6A01C3C09'
 
 if hwid == Blacklisted then
     game.Players.LocalPlayer:Kick("You Are Blacklisted If You Think This Is A Mistake Message zont#0001")
