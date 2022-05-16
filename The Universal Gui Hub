@@ -91,7 +91,7 @@ Notification:Notify(
 )
 local plr = game.Players.LocalPlayer
 
-local key = "Cardi B"
+local key = "Event"
 local okey = "afk im creaming"
 local Exit = "x"
 wait(1)
