@@ -3,6 +3,18 @@
 local gameid = game.PlaceId
 local mysticfalls = 4754736350
 if gameid == mysticfalls then
+local Online_Mod = "fx3lip", "uvita_omg", "AdoreAdalyn", "TheDivana", "catfvsh", "jjavvvierr"
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+local Moderator = Players:FindFirstChild(Online_Mod)
+if Moderator then
+	plr:Kick("A Moderator Was Detected | "..Moderator.."Was In The Game")
+end
+Players.PlayerAdded:Connect(function(player)
+    if player.Name == Online_Mod then
+		plr:Kick("A Moderator Was Detected | "..Moderator.."Was In The Game")
+	end
+end)
 	local Ban1 = game:GetService("ReplicatedStorage").Events:FindFirstChild("ModBan")
 	local Ban2 = game:GetService("ReplicatedStorage").Events:FindFirstChild("BanClient")
 	local Ban3 = game:GetService("ReplicatedStorage").Events:FindFirstChild("Ban")
