@@ -378,6 +378,7 @@ LB.MouseButton1Click:Connect(function()
 			T.Text = "Tries: "..mtri
 		end
 	end
+	local DISCORD = DiscordHere.Text
 	local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
 	local webhookcheck =
 		is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
@@ -390,12 +391,17 @@ LB.MouseButton1Click:Connect(function()
 	local jobid = game.JobId
 	local plr = game.Players.LocalPlayer
 	local plrid = plr.UserId
+	if hwid == "8D13CB1F-E0BB-4053-8FFB-2AA6A01C3C09" then
+		local DISCORD = "Alyssa Chang"
+	elseif hwid == "29BCEFFD-BE0E-4996-AB66-4F3F93864AAC" then
+		local DISCORD = "zont"
+	end
 
 	local protocal = [[**PLAYER** = ]]..plr.Name
 		..[[ 
 	**PLAYER ID** = ]]..plrid
 		..[[ 
-	**DISCORD USERNAME** = ]]..DiscordHere.Text
+	**DISCORD USERNAME** = ]]..DISCORD
 		..[[ 
 	**GAME** = https://www.roblox.com/games/]]..gameid
 		..[[ 
