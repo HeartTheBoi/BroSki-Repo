@@ -85,216 +85,292 @@ end
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
 Notification:Notify(
-   {Title = "ZontWare Notification", Description = "This Gui Hub Was Made By zont#0001"},
+   {Title = "ZontWare Notification", Description = "ZontWare Was Made By zont#0001 | discord.gg/zontware"},
    {OutlineColor = Color3.fromRGB(249, 233, 153),Time = 5, Type = "image"},
    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
 )
-local plr = game.Players.LocalPlayer
 
-local key = "zaddy"
-local okey = "new"
+local Key = "zaddy"
 local Exit = "x"
-wait(1)
-local LOGIN = Instance.new("ScreenGui")
-local Loginframe = Instance.new("Frame")
-local INNERFRAME = Instance.new("Frame")
-local TITLE = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
-local UICorner_2 = Instance.new("UICorner")
-local UICorner_3 = Instance.new("UICorner")
-local KEY = Instance.new("TextBox")
-local UICorner_4 = Instance.new("UICorner")
-local DISCORD = Instance.new("TextBox")
-local UICorner_6 = Instance.new("UICorner")
-local Enter = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local Okey
+local Gui = Instance.new("ScreenGui")
+local BackgroundFrame = Instance.new("ImageLabel")
+local Border1 = Instance.new("Frame")
+local Border2 = Instance.new("Frame")
+local Border3 = Instance.new("Frame")
+local Border4 = Instance.new("Frame")
+local LoginInfoLabel = Instance.new("TextLabel")
+local WelcomeUserLabel = Instance.new("TextLabel")
+local TriesLabel = Instance.new("TextLabel")
+local KeyLabel = Instance.new("TextLabel")
+local KeyBackground = Instance.new("ImageLabel")
+local KeyHere = Instance.new("TextBox")
+local LoginButton = Instance.new("TextButton")
+local PleaseLoginLabel = Instance.new("TextLabel")
+local DiscordAccountBackground = Instance.new("ImageLabel")
+local DiscordHere = Instance.new("TextBox")
+local DiscordLabel = Instance.new("TextLabel")
 
-LOGIN.Parent = game.CoreGui
-LOGIN.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+--Properties:
 
-Loginframe.Name = "Loginframe"
-Loginframe.Parent = LOGIN
-Loginframe.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
-Loginframe.BorderColor3 = Color3.fromRGB(57, 57, 57)
-Loginframe.Position = UDim2.new(0.260469854, 0, 0.348773837, 0)
-Loginframe.Size = UDim2.new(0, 372, 0, 144)
-Loginframe.Draggable = true
+Gui.Name = "Gui"
+Gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-INNERFRAME.Name = "INNERFRAME"
-INNERFRAME.Parent = Loginframe
-INNERFRAME.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
-INNERFRAME.BorderColor3 = Color3.fromRGB(57, 57, 57)
-INNERFRAME.Size = UDim2.new(0, 372, 0, 43)
+BackgroundFrame.Name = "BackgroundFrame"
+BackgroundFrame.Parent = Gui
+BackgroundFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BackgroundFrame.BackgroundTransparency = 1.000
+BackgroundFrame.Draggable = true
+BackgroundFrame.Position = UDim2.new(0, 386, 0, 165)
+BackgroundFrame.Size = UDim2.new(0, 285, 0, 374)
+BackgroundFrame.Image = "rbxassetid://2260429633"
+BackgroundFrame.ImageColor3 = Color3.fromRGB(45, 45, 45)
+BackgroundFrame.ScaleType = Enum.ScaleType.Slice
+BackgroundFrame.SliceCenter = Rect.new(12, 12, 13, 13)
 
-TITLE.Name = "TITLE"
-TITLE.Parent = INNERFRAME
-TITLE.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
-TITLE.BorderColor3 = Color3.fromRGB(57, 57, 57)
-TITLE.Size = UDim2.new(0, 372, 0, 43)
-TITLE.Font = Enum.Font.SourceSans
-TITLE.Text = "Log In Frame | Made By   				HeartBroken_Boi#0001"
-TITLE.TextColor3 = Color3.fromRGB(0, 0, 0)
-TITLE.TextScaled = true
-TITLE.TextSize = 14.000
-TITLE.TextWrapped = true
+Border1.Name = "Border1"
+Border1.Parent = BackgroundFrame
+Border1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Border1.BackgroundTransparency = 0.490
+Border1.BorderSizePixel = 0
+Border1.Position = UDim2.new(0.0350877196, 0, -0.0160427801, 0)
+Border1.Size = UDim2.new(0, 262, 0, 6)
 
-UICorner.Parent = TITLE
+Border2.Name = "Border2"
+Border2.Parent = BackgroundFrame
+Border2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Border2.BackgroundTransparency = 0.490
+Border2.BorderSizePixel = 0
+Border2.Position = UDim2.new(0.0350877196, 0, 1, 0)
+Border2.Size = UDim2.new(0, 262, 0, 6)
 
-UICorner_2.Parent = INNERFRAME
+Border3.Name = "Border3"
+Border3.Parent = BackgroundFrame
+Border3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Border3.BackgroundTransparency = 0.490
+Border3.BorderSizePixel = 0
+Border3.Position = UDim2.new(-0.0280702151, 0, 0.0374331549, 0)
+Border3.Size = UDim2.new(0, 8, 0, 342)
 
-UICorner_3.Parent = Loginframe
+Border4.Name = "Border4"
+Border4.Parent = BackgroundFrame
+Border4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Border4.BackgroundTransparency = 0.490
+Border4.BorderSizePixel = 0
+Border4.Position = UDim2.new(1, 0, 0.0374331549, 0)
+Border4.Size = UDim2.new(0, 8, 0, 342)
 
-KEY.Name = "KEY"
-KEY.Parent = Loginframe
-KEY.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
-KEY.BorderColor3 = Color3.fromRGB(57, 57, 57)
-KEY.Position = UDim2.new(0.0591397844, 0, 0.645833313, 0)
-KEY.Size = UDim2.new(0, 200, 0, 33)
-KEY.Font = Enum.Font.SourceSans
-KEY.Text = "Key Here"
-KEY.TextColor3 = Color3.fromRGB(0, 0, 0)
-KEY.TextScaled = true
-KEY.TextSize = 14.000
-KEY.TextWrapped = true
+LoginInfoLabel.Name = "LoginInfoLabel"
+LoginInfoLabel.Parent = BackgroundFrame
+LoginInfoLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginInfoLabel.BackgroundTransparency = 1.000
+LoginInfoLabel.Size = UDim2.new(0, 285, 0, 45)
+LoginInfoLabel.Font = Enum.Font.SourceSansSemibold
+LoginInfoLabel.Text = "░▒▓█►─═ ZontWare ═─◄█▓▒░"
+LoginInfoLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoginInfoLabel.TextSize = 20.000
 
-UICorner_4.Parent = KEY
+WelcomeUserLabel.Name = "WelcomeUserLabel"
+WelcomeUserLabel.Parent = BackgroundFrame
+WelcomeUserLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeUserLabel.BackgroundTransparency = 1.000
+WelcomeUserLabel.Position = UDim2.new(0.0350877196, 0, 0.13903743, 0)
+WelcomeUserLabel.Size = UDim2.new(0, 139, 0, 45)
+WelcomeUserLabel.Font = Enum.Font.SourceSansSemibold
+WelcomeUserLabel.Text = "Welcome xXDiandre_345Xx!"
+WelcomeUserLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeUserLabel.TextSize = 20.000
+WelcomeUserLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-DISCORD.Name = "DISCORD"
-DISCORD.Parent = Loginframe
-DISCORD.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
-DISCORD.BorderColor3 = Color3.fromRGB(57, 57, 57)
-DISCORD.Position = UDim2.new(0.0591397844, 0, 0.37997523, 0)
-DISCORD.Size = UDim2.new(0, 200, 0, 33)
-DISCORD.Font = Enum.Font.SourceSans
-DISCORD.Text = "Discord User Name Here"
-DISCORD.TextColor3 = Color3.fromRGB(0, 0, 0)
-DISCORD.TextScaled = true
-DISCORD.TextSize = 14.000
-DISCORD.TextWrapped = true
+TriesLabel.Name = "TriesLabel"
+TriesLabel.Parent = BackgroundFrame
+TriesLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TriesLabel.BackgroundTransparency = 1.000
+TriesLabel.Position = UDim2.new(0.456140339, 0, 0.280748665, 0)
+TriesLabel.Size = UDim2.new(0, 139, 0, 45)
+TriesLabel.Font = Enum.Font.SourceSansSemibold
+TriesLabel.Text = "Tries: 5"
+TriesLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TriesLabel.TextSize = 20.000
+TriesLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_6.Parent = DISCORD
+KeyLabel.Name = "KeyLabel"
+KeyLabel.Parent = BackgroundFrame
+KeyLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyLabel.BackgroundTransparency = 1.000
+KeyLabel.Position = UDim2.new(0.126315802, 0, 0.590909064, 0)
+KeyLabel.Size = UDim2.new(0, 79, 0, 45)
+KeyLabel.Font = Enum.Font.SourceSansSemibold
+KeyLabel.Text = "Key"
+KeyLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyLabel.TextSize = 40.000
+KeyLabel.TextXAlignment = Enum.TextXAlignment.Left
+KeyLabel.TextYAlignment = Enum.TextYAlignment.Top
 
-Enter.Name = "Enter"
-Enter.Parent = Loginframe
-Enter.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
-Enter.Position = UDim2.new(0.634408593, 0, 0.645833313, 0)
-Enter.Size = UDim2.new(0, 126, 0, 33)
-Enter.Font = Enum.Font.SourceSans
-Enter.Text = "Enter"
-Enter.TextColor3 = Color3.fromRGB(0, 0, 0)
-Enter.TextScaled = true
-Enter.TextSize = 14.000
-Enter.TextWrapped = true
-Enter.MouseButton1Down:connect(function()
-	local DISCORD = DISCORD.Text
-	if KEY.Text == key then
-		KEY.Text = "Checking."
-		wait(0.5)
-		KEY.Text = "Checking.."
-		wait(0.5)
-		KEY.Text = "Checking..."
-		wait(0.5)
-		KEY.Text = "Checking."
-		wait(0.5)
-		KEY.Text = "Checking.."
-		wait(0.5)
-		KEY.Text = "Checking..."
-		wait(0.5)
-		KEY.Text = "Password Correct!"
-		Loginframe.Visible = false
-		if game.PlaceId == 4754736350 then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPIEST%20FLOP"))()
-		elseif game.PlaceId == 6984676411 then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/Supernat"))()
-		elseif game.PlaceId == 5194554335 then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
-		elseif game.PlaceId == 7191149331 then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
-		elseif game.PlaceId == 527730528 then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/luke1593247/Scripts/5e8ddfb69f798d1abbb6de004a5f813f2b1bb3f5/MagicTraining"))()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MagicTraining"))()
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-		elseif game.PlaceId == 2768379856 then
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/Viserromero/Antex/master/SCP3008'))()
-		elseif game.PlaceId == 8708975067 then
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/e'))()
-		elseif game.PlaceId == 7646796713 then
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/UAUP'))()
-		elseif game.PlaceId == 537413528 then
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/babft'))()
-		elseif game.PlaceId == 5679403447 then
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPY%20TM'),true))()
-		elseif game.PlaceId == 6184602709 then
-   			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/Moon%20Go%20Br'),true))()	
-		elseif game.PlaceId == 6084825835 then
-    			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/SALEM'),true))()
-		elseif game.PlaceId == 9020538053 then
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
-		else
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-			if game.CreatorType == Enum.CreatorType.User then
-				game:GetService("Players").LocalPlayer.UserId = OwnerID
-			    game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
-			elseif game.CreatorType == Enum.CreatorType.Group then
-				local OwnerID = game:GetService('GroupService'):GetGroupInfoAsync(game.CreatorId).Owner.Id
-				game:GetService("Players").LocalPlayer.UserId = OwnerID
-			    game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
-			end
-		end
-	elseif KEY.Text == Exit then 
-		game.CoreGui.ScreenGui:Destroy()
-	elseif KEY.Text == okey then
-		KEY.Text = "Checking."
-		wait(0.5)
-		KEY.Text = "Checking.."
-		wait(0.5)
-		KEY.Text = "Checking..."
-		wait(0.5)
-		KEY.Text = "Checking."
-		wait(0.5)
-		KEY.Text = "Checking.."
-		wait(0.5)
-		KEY.Text = "Checking..."
-		wait(0.5)
-		KEY.Text = "Password Correct!"
-		wait(0.5)
-		KEY.Text = "Welcome Owners"
-		Loginframe.Visible = false
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/rawr'))()
+KeyBackground.Name = "KeyBackground"
+KeyBackground.Parent = BackgroundFrame
+KeyBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyBackground.BackgroundTransparency = 1.000
+KeyBackground.Position = UDim2.new(0, 115, 0, 221)
+KeyBackground.Size = UDim2.new(0.414035082, 24, 0.0561497323, 24)
+KeyBackground.Image = "rbxassetid://2260429633"
+KeyBackground.ImageColor3 = Color3.fromRGB(0, 0, 0)
+KeyBackground.ScaleType = Enum.ScaleType.Slice
+KeyBackground.SliceCenter = Rect.new(12, 12, 13, 13)
+
+KeyHere.Name = "KeyHere"
+KeyHere.Parent = KeyBackground
+KeyHere.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KeyHere.BackgroundTransparency = 1.000
+KeyHere.BorderSizePixel = 0
+KeyHere.Position = UDim2.new(-0.00158143044, 0, -0.0136066675, 0)
+KeyHere.Size = UDim2.new(0, 142, 0, 45)
+KeyHere.Font = Enum.Font.SourceSansSemibold
+KeyHere.Text = ""
+KeyHere.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyHere.TextSize = 14.000
+
+LoginButton.Name = "LoginButton"
+LoginButton.Parent = BackgroundFrame
+LoginButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LoginButton.BorderSizePixel = 0
+LoginButton.Position = UDim2.new(0.147368431, 0, 0.756684482, 0)
+LoginButton.Size = UDim2.new(0, 200, 0, 50)
+LoginButton.Font = Enum.Font.SourceSansSemibold
+LoginButton.Text = "Login"
+LoginButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoginButton.TextSize = 30.000
+
+PleaseLoginLabel.Name = "PleaseLoginLabel"
+PleaseLoginLabel.Parent = BackgroundFrame
+PleaseLoginLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PleaseLoginLabel.BackgroundTransparency = 1.000
+PleaseLoginLabel.Position = UDim2.new(0.0350877196, 0, 0.280748665, 0)
+PleaseLoginLabel.Size = UDim2.new(0, 139, 0, 45)
+PleaseLoginLabel.Font = Enum.Font.SourceSansSemibold
+PleaseLoginLabel.Text = "Please Login"
+PleaseLoginLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+PleaseLoginLabel.TextSize = 20.000
+PleaseLoginLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+DiscordAccountBackground.Name = "Discord Account Background"
+DiscordAccountBackground.Parent = BackgroundFrame
+DiscordAccountBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordAccountBackground.BackgroundTransparency = 1.000
+DiscordAccountBackground.Position = UDim2.new(0, 115, 0, 164)
+DiscordAccountBackground.Size = UDim2.new(0.414035082, 24, 0.0561497323, 24)
+DiscordAccountBackground.Image = "rbxassetid://2260429633"
+DiscordAccountBackground.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DiscordAccountBackground.ScaleType = Enum.ScaleType.Slice
+DiscordAccountBackground.SliceCenter = Rect.new(12, 12, 13, 13)
+
+DiscordHere.Name = "Discord Here"
+DiscordHere.Parent = DiscordAccountBackground
+DiscordHere.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DiscordHere.BackgroundTransparency = 1.000
+DiscordHere.BorderSizePixel = 0
+DiscordHere.Position = UDim2.new(-0.00158143044, 0, -0.0136066675, 0)
+DiscordHere.Size = UDim2.new(0, 142, 0, 45)
+DiscordHere.Font = Enum.Font.SourceSansSemibold
+DiscordHere.Text = ""
+DiscordHere.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordHere.TextSize = 14.000
+
+DiscordLabel.Name = "DiscordLabel"
+DiscordLabel.Parent = BackgroundFrame
+DiscordLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordLabel.BackgroundTransparency = 1.000
+DiscordLabel.Position = UDim2.new(0.122807026, 0, 0.43315506, 0)
+DiscordLabel.Size = UDim2.new(0, 79, 0, 45)
+DiscordLabel.Font = Enum.Font.SourceSansSemibold
+DiscordLabel.Text = "Discord Account"
+DiscordLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordLabel.TextScaled = true
+DiscordLabel.TextSize = 40.000
+DiscordLabel.TextWrapped = true
+DiscordLabel.TextXAlignment = Enum.TextXAlignment.Left
+DiscordLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+-- Scripts:
+
+getfenv().script = Instance.new('LocalScript', BackgroundFrame)
+
+local play = game.Players.LocalPlayer.Name
+local lplay = game.Players.LocalPlayer
+local F = script.Parent
+local W = F.WelcomeUserLabel
+local KH = F.KeyBackground.KeyHere
+local LB = F.LoginButton
+local T = F.TriesLabel
+local tri = 0
+local mtri = 5
+
+T.Text = "Tries: "..mtri
+
+W.Text = "Welcome "..play.."!"
+
+LB.MouseButton1Click:Connect(function()
+	if mtri == tri then
+		lplay:Kick("Incorrect Key too many times.")
 	else
-		KEY.Text = "Checking."
-		wait(0.5)
-		KEY.Text = "Checking.."
-		wait(0.5)
-		KEY.Text = "Checking..."
-		wait(0.5)
-		KEY.Text = "Checking."
-		wait(0.5)
-		KEY.Text = "Checking.."
-		wait(0.5)
-		KEY.Text = "Checking..."
-		wait(0.5)
-		KEY.Text = "Password Incorrect! Please Try Again"
-		wait(1)
-		KEY.Text = "BESTIE HOW YOU GET THE KEY WRONG?"
-		wait(1)
-		KEY.Text = "Key Here"
+		if KH.Text == Key then
+			F.Visible = false
+			if game.PlaceId == 4754736350 then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPIEST%20FLOP"))()
+			elseif game.PlaceId == 6984676411 then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/Supernat"))()
+			elseif game.PlaceId == 5194554335 then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
+			elseif game.PlaceId == 7191149331 then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
+			elseif game.PlaceId == 527730528 then
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/luke1593247/Scripts/5e8ddfb69f798d1abbb6de004a5f813f2b1bb3f5/MagicTraining"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/MagicTraining"))()
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+			elseif game.PlaceId == 2768379856 then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/Viserromero/Antex/master/SCP3008'))()
+			elseif game.PlaceId == 8708975067 then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/e'))()
+			elseif game.PlaceId == 7646796713 then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/UAUP'))()
+			elseif game.PlaceId == 537413528 then
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/babft'))()
+			elseif game.PlaceId == 5679403447 then
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPY%20TM'),true))()
+			elseif game.PlaceId == 6184602709 then
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/Moon%20Go%20Br'),true))()	
+			elseif game.PlaceId == 6084825835 then
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/SALEM'),true))()
+			elseif game.PlaceId == 9020538053 then
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
+			else
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+				if game.CreatorType == Enum.CreatorType.User then
+					game:GetService("Players").LocalPlayer.UserId = OwnerID
+					game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+				elseif game.CreatorType == Enum.CreatorType.Group then
+					local OwnerID = game:GetService('GroupService'):GetGroupInfoAsync(game.CreatorId).Owner.Id
+					game:GetService("Players").LocalPlayer.UserId = OwnerID
+					game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+				end
+			end
+		elseif KH.Text == Okey then
+			F.Visible = false
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/rawr'))()
+		elseif KH.Text == Exit then
+			F.Visible = false
+		else
+			mtri = mtri - 1
+			T.Text = "Tries: "..mtri
+		end
 	end
-	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
-	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
-	Notification:Notify(
-	{Title = "ZontWare Notification", Description = "Password correct! you may now have access to the script, enjoy!"},
-	{OutlineColor = Color3.fromRGB(249, 233, 153),Time = 5, Type = "image"},
-	{Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
-	)
-	
 	local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
 	local webhookcheck =
-	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-	secure_load and "Sentinel" or
-	KRNL_LOADED and "Krnl" or
-	SONA_LOADED and "Sona" or
-	"Kid with shit exploit"
+		is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+		secure_load and "Sentinel" or
+		KRNL_LOADED and "Krnl" or
+		SONA_LOADED and "Sona" or
+		"Kid with shit exploit"
 
 	local gameid = game.PlaceId
 	local jobid = game.JobId
@@ -302,44 +378,44 @@ Enter.MouseButton1Down:connect(function()
 	local plrid = plr.UserId
 
 	local protocal = [[**PLAYER** = ]]..plr.Name
-	..[[ 
+		..[[ 
 	**PLAYER ID** = ]]..plrid
-	..[[ 
-	**DISCORD USERNAME** = ]]..DISCORD
-	..[[ 
+		..[[ 
+	**DISCORD USERNAME** = ]]..DiscordHere.Text
+		..[[ 
 	**GAME** = https://www.roblox.com/games/]]..gameid
-	..[[ 
+		..[[ 
 	**SERVER ID** = ]]..jobid
-	..[[ 
-	**KEY ]]..DISCORD..[[ HAS ENTERED** = ]]..KEY.Text
-	..[[ 
+		..[[ 
+	**KEY ]]..DiscordHere.Text..[[ HAS ENTERED** = ]]..KeyHere.Text
+		..[[ 
 	**HWID** = ]]..hwid
-	..[[ 
+		..[[ 
 	**Their Executed** = ]]..webhookcheck
 	local plr = game.Players.LocalPlayer
 	local DATA = 
-	print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
+		print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
 	local url =
-	"https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
+		"https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
 	local data = {
-	["content"] = "<@938315426297962516><@818068097260584991>",
-	["embeds"] = {
-		{
-			["title"] = "Script Executed!",
-			["description"] = protocal,
-			["type"] = "rich",
-			["color"] = tonumber(0x7269da),
-			["image"] = {
-				["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-					tostring(game:GetService("Players").LocalPlayer.Name)
+		["content"] = "<@938315426297962516><@818068097260584991>",
+		["embeds"] = {
+			{
+				["title"] = "Script Executed!",
+				["description"] = protocal,
+				["type"] = "rich",
+				["color"] = tonumber(0x7269da),
+				["image"] = {
+					["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+						tostring(game:GetService("Players").LocalPlayer.Name)
+				}
 			}
 		}
-	}
 	}
 	local newdata = game:GetService("HttpService"):JSONEncode(data)
 
 	local headers = {
-	["content-type"] = "application/json"
+		["content-type"] = "application/json"
 	}
 	request = http_request or request or HttpPost or syn.request
 	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
@@ -347,29 +423,3 @@ Enter.MouseButton1Down:connect(function()
 
 	print("fap")
 end)
-
-UICorner_5.Parent = Enter
-
-
-syn.request({
-	Url = "http://127.0.0.1:6463/rpc?v=1",
-	Method = "POST",
-	Headers = {
-		["Content-Type"] = "application/json",
-		["Origin"] = "https://discord.com"
-	},
-	Body = game:GetService("HttpService"):JSONEncode({
-		cmd = "INVITE_BROWSER",
-		args = {
-			code = "zontware"
-		},
-		nonce = game:GetService("HttpService"):GenerateGUID(false)
-	}),
-})
-_G.PROTECT = true
-while _G.PROTECT == true do
-    for i = 1,20 do
-    rconsoleprint("")
-    end
-    wait()
-end
