@@ -241,6 +241,7 @@ KeyHere.Font = Enum.Font.SourceSansSemibold
 KeyHere.Text = ""
 KeyHere.TextColor3 = Color3.fromRGB(255, 255, 255)
 KeyHere.TextSize = 14.000
+KeyHere.TextScaled = true
 
 LoginButton.Name = "LoginButton"
 LoginButton.Parent = BackgroundFrame
@@ -287,6 +288,7 @@ DiscordHere.Font = Enum.Font.SourceSansSemibold
 DiscordHere.Text = ""
 DiscordHere.TextColor3 = Color3.fromRGB(255, 255, 255)
 DiscordHere.TextSize = 14.000
+DiscordHere.TextScaled = true
 
 DiscordLabel.Name = "DiscordLabel"
 DiscordLabel.Parent = BackgroundFrame
