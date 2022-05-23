@@ -357,6 +357,8 @@ LB.MouseButton1Click:Connect(function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/SALEM'),true))()
 			elseif game.PlaceId == 9020538053 then
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
+			elseif game.PlaceId == 189707 then
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/asdwasdawq'),true))()
 			else
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 				if game.CreatorType == Enum.CreatorType.User then
