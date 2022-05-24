@@ -37,10 +37,18 @@ end)
 	    end
 end
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-local Blacklisted = 'A21F8594-34DF-413E-88EA-B5C0F6EEEDC3', '6A94282D-FCC5-4C25-B63E-5192E386B482', 'DE53CB41-4A46-4749-8282-B2871082DDA1', '15584772-A779-453F-8811-34CAD3C22560', '8D13CB1F-E0BB-4053-8FFB-2AA6A01C3C09'
+local blacklisted_hwids1 = '40A53E55-6D74-451F-ABAA-694394BF830F','3EECB714-2E68-40D1-9294-694E64393F55','AC204FE6-98C6-45E1-911C-9E2870E43C71','8D13CB1F-E0BB-4053-8FFB-2AA6A01C3C09'
+local blacklisted_hwids2 = '0C0BC3C8-B1C7-4EB9-823A-8D2C1A82F885'
 
-if hwid == Blacklisted then
-    game.Players.LocalPlayer:Kick("You Are Blacklisted If You Think This Is A Mistake Message zont#0001")
+if hwid == blacklisted_hwids1 or blacklisted_hwids2 then
+    game.Players.LocalPlayer:Kick([[
+You Have Been Blacklisted ZontWare!
+If You Think This Is A Mistake Message zont#0001
+Reasons You May Have Been Blacklisted - 
+Did Not Put Name In Key System
+Using Script Without Permission
+Blacklisted For Leaking
+    ]])
     local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
 	local webhookcheck =
 	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
