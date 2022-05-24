@@ -36,7 +36,7 @@ end)
 		Ban5:Destroy()
 	    end
 end
-local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+--[[local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local blacklisted_hwids1 = '40A53E55-6D74-451F-ABAA-694394BF830F','3EECB714-2E68-40D1-9294-694E64393F55','AC204FE6-98C6-45E1-911C-9E2870E43C71','8D13CB1F-E0BB-4053-8FFB-2AA6A01C3C09'
 local blacklisted_hwids2 = '0C0BC3C8-B1C7-4EB9-823A-8D2C1A82F885'
 
@@ -48,7 +48,7 @@ Reasons You May Have Been Blacklisted -
 Did Not Put Name In Key System
 Using Script Without Permission
 Blacklisted For Leaking
-    ]])
+    ]]--)--[[
     local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
 	local webhookcheck =
 	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
@@ -62,46 +62,46 @@ Blacklisted For Leaking
 	local plr = game.Players.LocalPlayer
 	local plrid = plr.UserId
 
-	local protocal = [[**PLAYER** = ]]..plr.Name
+	local protocal = [[**PLAYER** = ]]--[[..plr.Name
 	..[[ 
-	**PLAYER ID** = ]]..plrid
-	..[[ 
-	**GAME** = https://www.roblox.com/games/]]..gameid
-	..[[ 
-	**SERVER ID** = ]]..jobid
-	..[[ 
-	**HWID** = ]]..hwid
-	..[[ 
-	**Their Executed** = ]]..webhookcheck
-	local plr = game.Players.LocalPlayer
-	local DATA = 
-	print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
-	local url =
-	"https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
-	local data = {
-	["content"] = "<@938315426297962516><@818068097260584991>",
-	["embeds"] = {
-		{
-			["title"] = "Script Executed!(THEY ARE BLACKLISTED!)",
-			["description"] = protocal,
-			["type"] = "rich",
-			["color"] = tonumber(0x7269da),
-			["image"] = {
-				["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-					tostring(game:GetService("Players").LocalPlayer.Name)
-			}
-		}
-	}
-	}
-	local newdata = game:GetService("HttpService"):JSONEncode(data)
+	**PLAYER ID** = ]]--]]..plrid
+	--[[..[
+	**GAME** = https://www.roblox.com/games/--]]..gameid
+--	..[[ 
+--	**SERVER ID** = ]]..jobid
+--	..[[ 
+--	**HWID** = ]]..hwid
+--	..[[ 
+--	**Their Executed** = ]]..webhookcheck
+--	local plr = game.Players.LocalPlayer
+--	local DATA = 
+--	print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
+--	local url =
+--	"https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
+--	local data = {
+--	["content"] = "<@938315426297962516><@818068097260584991>",
+--	["embeds"] = {
+--		{
+--			["title"] = "Script Executed!(THEY ARE BLACKLISTED!)",
+--			["description"] = protocal,
+--			["type"] = "rich",
+--			["color"] = tonumber(0x7269da),
+--			["image"] = {
+--				["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+--					tostring(game:GetService("Players").LocalPlayer.Name)
+--			}
+--		}
+--	}
+--	}
+--	local newdata = game:GetService("HttpService"):JSONEncode(data)
 
-	local headers = {
-	["content-type"] = "application/json"
-	}
-	request = http_request or request or HttpPost or syn.request
-	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-	request(abcdef)
-end
+--	local headers = {
+--	["content-type"] = "application/json"
+--	}
+--	request = http_request or request or HttpPost or syn.request
+--	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+--	request(abcdef)
+--end--]]
 local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%201"))()
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/HeartTheBoi/BroSki-Repo/main/Notify%202"))()
 Notification:Notify(
