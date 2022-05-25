@@ -46,7 +46,7 @@ Notification:Notify(
 
 local Key = "zaddy"
 local Exit = "x"
-local Okey
+local Okey = "a"
 local Gui = Instance.new("ScreenGui")
 local BackgroundFrame = Instance.new("ImageLabel")
 local Border1 = Instance.new("Frame")
