@@ -390,3 +390,4 @@ end)
 local blacklist = "28F99FB1-C543-49AE-A5E0-573B34B28873"
 if hwid == blacklist then
 plr:Kick()
+end
