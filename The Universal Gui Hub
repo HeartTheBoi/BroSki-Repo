@@ -387,7 +387,11 @@ LB.MouseButton1Click:Connect(function()
 
 	print("fap")
 end)
-local blacklist = "28F99FB1-C543-49AE-A5E0-573B34B28873"
-if hwid == blacklist then
-plr:Kick()
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
+local Blacklisted_User = {
+    ["a"] = "8539a5a4-8744-4a7f-bf2e-7e821c657ed8",
+}
+if hwid == Blacklisted_User.a then
+    game.Players.LocalPlayer:Kick("Blacklisted/If you think this is a mistake message zont#0001")
 end
+
