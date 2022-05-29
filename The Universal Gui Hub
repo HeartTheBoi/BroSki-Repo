@@ -387,12 +387,3 @@ LB.MouseButton1Click:Connect(function()
 
 	print("fap")
 end)
-local plr = game.Players.LocalPlayer
-local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
-local Black = {
-    ["a"] = "8539a5a4-8744-4a7f-bf2e-7e821c657ed8",
-    ["b"] = "558F0583-D577-4B6B-AC2E-9F88172F5FAF"
-}
-if hwid == Black.a then
-    game.Players.LocalPlayer:Kick("z")
-end
