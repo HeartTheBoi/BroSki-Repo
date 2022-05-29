@@ -387,69 +387,12 @@ LB.MouseButton1Click:Connect(function()
 
 	print("fap")
 end)
+local plr = game.Players.LocalPlayer
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
-local Blacklisted_User = {
+local Black = {
     ["a"] = "8539a5a4-8744-4a7f-bf2e-7e821c657ed8",
+    ["b"] = "558F0583-D577-4B6B-AC2E-9F88172F5FAF"
 }
-if hwid == Blacklisted_User.a then
-    game.Players.LocalPlayer:Kick("Blacklisted/If you think this is a mistake message zont#0001")
-end
-
-
-local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
-local Blacklisted_User = {
-    ["a"] = "8539a5a4-8744-4a7f-bf2e-7e821c657ed8",
-    ["b"] = "558F0583-D577-4B6B-AC2E-9F88172F5FAF",
-    ["c"] = "29BCEFFD-BE0E-4996-AB66-4F3F93864AAC",
-    ["d"] = "F4CAC833-23DE-4482-9C3F-23EE5D371DD6"
-}
-if hwid == Blacklisted_User.a or Blacklisted_User.b or Blacklisted_User.c  or Blacklisted_User.d then
-    game.Players.LocalPlayer:Kick("Blacklisted/If you think this is a mistake message zont#0001")
-    local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
-    local webhookcheck = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Kid with shit exploit"
-    local gameid = game.PlaceId
-    local jobid = game.JobId
-    local plr = game.Players.LocalPlayer
-    local plrid = plr.UserId
-
-    local protocal = [[**PLAYER** = ]]..plr.Name
-        ..[[ 
-    **PLAYER ID** = ]]..plrid
-        ..[[ 
-    **GAME** = https://www.roblox.com/games/]]..gameid
-        ..[[ 
-    **SERVER ID** = ]]..jobid
-        ..[[ 
-    **HWID** = ]]..hwid
-        ..[[ 
-    **Their Executed** = ]]..webhookcheck
-    local plr = game.Players.LocalPlayer
-    local DATA = 
-        print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
-    local url =
-        "https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
-    local data = {
-        ["content"] = "<@938315426297962516><@818068097260584991>",
-        ["embeds"] = {
-            {
-                ["title"] = "Script Executed!",
-                ["description"] = protocal,
-                ["type"] = "rich",
-                ["color"] = tonumber(0x7269da),
-                ["image"] = {
-                    ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                        tostring(game:GetService("Players").LocalPlayer.Name)
-                }
-            }
-        }
-    }
-    local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-    local headers = {
-        ["content-type"] = "application/json"
-    }
-    request = http_request or request or HttpPost or syn.request
-    local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-    request(abcdef)
-    print("fap")
+if hwid == Black.a then
+    game.Players.LocalPlayer:Kick("z")
 end
