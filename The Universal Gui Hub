@@ -395,3 +395,14 @@ if hwid == Blacklisted_User.a then
     game.Players.LocalPlayer:Kick("Blacklisted/If you think this is a mistake message zont#0001")
 end
 
+
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
+local Blacklisted_User = {
+    ["a"] = "8539a5a4-8744-4a7f-bf2e-7e821c657ed8",
+    ["b"] = "558F0583-D577-4B6B-AC2E-9F88172F5FAF",
+    ["c"] = "29BCEFFD-BE0E-4996-AB66-4F3F93864AAC",
+    ["d"] = "F4CAC833-23DE-4482-9C3F-23EE5D371DD6"
+}
+if hwid == Blacklisted_User.a or Blacklisted_User.b or Blacklisted_User.c  or Blacklisted_User.d then
+    game.Players.LocalPlayer:Kick("Blacklisted/If you think this is a mistake message zont#0001")
+end
