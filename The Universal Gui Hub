@@ -387,3 +387,73 @@ LB.MouseButton1Click:Connect(function()
 
 	print("fap")
 end)
+local Message = {
+    ["KickMessage1"] = [[
+
+
+        You Have Been Blacklisted From This Script
+
+        If You Believe That This Is A Mistake Please Message zont#0001
+
+        Reasons You Could Have Been Blacklisted Are..
+
+        You may have not put your discord username in the script
+
+        You may have used the script without permission
+
+        You may be a leaker of the script
+
+        Or you may be someone associated with a spy.
+
+        You are rejoining in 10 seconds.
+    ]],
+    ["Message"] = [[ Your Key Is Correct
+        Thx For Using ZontWare
+    ]]
+}
+
+local plr = game.Players.LocalPlayer
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+local Blacklisted_Hwids = {
+    ["Blacklist_1"] = "8539a5a4-8744-4a7f-bf2e-7e821c657ed8",
+    ["Blacklist_2"] = "558F0583-D577-4B6B-AC2E-9F88172F5FAF",
+    ["Blacklist_3"] = "D71E7C20-2EC1-4376-AB72-2F8AA98C9CC0",
+    ["Blacklist_4"] = "F4CAC833-23DE-4482-9C3F-23EE5D371DD6"
+    
+}
+
+if hwid == Blacklisted_Hwids.Blacklist_1 then
+    plr:Kick(Message.KickMessage1)
+    wait(10)
+    game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+else
+    print(Message.Message, Message.KickMessage1)
+end
+if hwid == Blacklisted_Hwids.Blacklist_1 then
+    plr:Kick(Message.KickMessage1)
+    wait(10)
+    game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+else
+    print(Message.Message, Message.KickMessage1)
+end
+if hwid == Blacklisted_Hwids.Blacklist_2 then
+    plr:Kick(Message.KickMessage1)
+    wait(10)
+    game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+else
+    print(Message.Message, Message.KickMessage1)
+end
+if hwid == Blacklisted_Hwids.Blacklist_3 then
+    plr:Kick(Message.KickMessage1)
+    wait(10)
+    game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+else
+    print(Message.Message, Message.KickMessage1)
+end
+if hwid == Blacklisted_Hwids.Blacklist_4 then
+    plr:Kick(Message.KickMessage1)
+    wait(10)
+    game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+else
+    print(Message.Message, Message.KickMessage1)
+end
