@@ -44,7 +44,7 @@ Notification:Notify(
    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
 )
 
-local Key = "new"
+local Key = "try again xoxo"
 local Exit = "x"
 local Okey = "a"
 local Gui = Instance.new("ScreenGui")
