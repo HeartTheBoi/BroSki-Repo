@@ -360,7 +360,7 @@ LB.MouseButton1Click:Connect(function()
 	local DATA = 
 		print("http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username="..plr.Name)
 	local url =
-		"https://discord.com/api/webhooks/966285471623831562/d7A6-MAsGoWXUq-NhIUVUyPFcIah-My4uh4grE01JXm469i-3tZovh56GFOWNkPPpWDV"
+		"https://discord.com/api/webhooks/981786273259880499/HysMwR1UifgGYyf7PgCVO55jK2RE_X_YjJq6b-xWUJeV5KfWNIV52OBdXeuWVZIYx0Yp"
 	local data = {
 		["content"] = "<@938315426297962516><@818068097260584991>",
 		["embeds"] = {
