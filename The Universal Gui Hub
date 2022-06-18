@@ -1,3 +1,5 @@
+local Message = "Thank You For Using AstroWare! But The Script Is Disabled Right Now! Because Of Someone Named Sad Please Join"
+
 local gameid = game.PlaceId
 local jobid = game.JobId
 local plr = game.Players.LocalPlayer
@@ -68,7 +70,7 @@ TextLabel.TextWrapped = true
 
 
 
-TextLabel.Text = "Thank You For Using AstroWare! Have Fun!"
+TextLabel.Text = Message
 wait(3)
 TextLabel.Text = ""
 wait(0.1)
@@ -90,7 +92,8 @@ local whitelist = {
     "41370C2F-C36F-4CE1-8FC5-7730207920B7",--<@878630524095184897>
     "8D13CB1F-E0BB-4053-8FFB-2AA6A01C3C09",--<@818068097260584991>
     "3A88036C-481C-4C7D-BA3F-A09DA37FD11B",--<@959112960125571142>
-	""--<@>
+    "9A7BCF11-DD82-4F13-9FD7-448A3CCEABA0",--<@896503056039018556>
+    "C89D8F78-6426-4396-9AAA-F97DE89F5B72"--<@519318395372568577>
 }
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId();
 for i,v in pairs(whitelist) do
